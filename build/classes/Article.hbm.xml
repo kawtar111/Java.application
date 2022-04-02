@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="Modele">
+<class name="Etudiant" table="etudiant">
+<meta attribute="sync-DAO">false</meta>
+
+<id name="id" type="integer">
+<column name="id" sql-type="int(4)" />
+<generator class="increment" />
+</id>
+<property name="NomAuteur" type="string">
+<column name="NomAuteur" sql-type="varchar(25)" 
+/>
+</property>
+<property name="DatePub" type="string">
+<column name="DatePub" sql-type="varchar(25)" />
+</property>
+
+<property name="texte_Article" type="string">
+<column name="texte_Article" sql-type="varchar(25)" />
+</property>
+
+<property name="photo" type="string">
+<column name="photo" sql-type="varchar(25)" />
+</property>
+
+</class>
+</hibernate-mapping>
